@@ -21,10 +21,6 @@ const MainContent = styled.div `
       font-size: 17px;
       letter-spacing: 3px;
     }
-    /* p{
-        font-size: 17px;
-        line-height: 20px;
-    } */
 `;
 
 const Header = styled.div `
@@ -39,13 +35,15 @@ const Header = styled.div `
 
 
 const ForecastWrapper = styled.div `
-    width: 900px;
-    margin-left:10px;
+    width: 100wh;
+    height: auto;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "day1 day2 day3 day4 day5";
-    position: absolute;
+    
+    grid-gap: 30px;
 `;
 
 const ForecastCard = styled.div `
@@ -56,47 +54,39 @@ const ForecastCard = styled.div `
     box-shadow: 0px 4px 9px rgba(129, 129, 129, 0.2);
     border-radius: 5px;
     background-color: white;
-    width: 130px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     padding: 10px;
     grid-area: day1;
+  
 
     &:nth-child(2) {
-    position: absolute;
-    width: 130px;
+    position: relative;
+    width: 200px;
     grid-area: day2;   
-    top: 0;
-    left: 0;
     }
 
     &:nth-child(3) {
-    position: absolute;
-    width: 130px;
-    grid-area: day3;   
-    top: 0;
-    left: 0;
+    position: relative;
+    width: 200px;
+    grid-area: day3;
     }
 
     &:nth-child(4) {
-    position: absolute;
-    width: 130px;
-    grid-area: day4;   
-    top: 0;
-    left: 0;
+    position: relative;
+    width: 200px;
+    grid-area: day4;
     }
 
     &:nth-child(5) {
-    width: 130px;
-    position: absolute;
-    grid-area: day5;   
-    top: 0;
-    left: 0;
+    width: 200px;
+    position: relative;
+    grid-area: day5;
     }
 `;
 
 const Temperature = styled.div `
     position: absolute;
-    /* border: 1px solid green; */
     text-align: center;
     align-items: center;
     width: 100%;
@@ -104,8 +94,8 @@ const Temperature = styled.div `
 `;
 
 const Image = styled.div `
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100px;
     position: absolute;
 `;
 
@@ -120,8 +110,6 @@ const Description = styled.div `
 `;
 
 const Forecast = props => {
-// class Forecast extends React.Component {
-//     render() {
 
         const date = new Date(); //gets the current date
         return (

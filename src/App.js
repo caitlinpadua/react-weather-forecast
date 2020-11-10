@@ -41,7 +41,7 @@ class App extends React.Component {
     temperatureDay5: undefined,
     conditionDay5: undefined,
     icon5: undefined,
-    
+
     //error
     error: undefined
   };
@@ -147,6 +147,18 @@ class App extends React.Component {
         conditionDay5   = {this.state.conditionDay5}
         icon5          = {this.state.icon5}
         feel5     = {this.state.feel5}
+
+        //day6
+        temperatureDay6 = {this.state.temperatureDay6}
+        conditionDay6   = {this.state.conditionDay6}
+        icon6          = {this.state.icon6}
+        feel6     = {this.state.feel6}
+
+        //day7
+        temperatureDay7 = {this.state.temperatureDay7}
+        conditionDay7   = {this.state.conditionDay7}
+        icon7          = {this.state.icon7}
+        feel7     = {this.state.feel7}
       
         //error
         error = {this.state.error}
